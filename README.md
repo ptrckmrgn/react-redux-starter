@@ -4,5 +4,4 @@ Simple React Redux template that includes Webpack, Babel, Sass, and basic struct
 
 ## Installation
 
-```npm run setup && npm run start
-```
+    npm run setup && npm run start
