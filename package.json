@@ -1,0 +1,20 @@
+{
+  "name": "react-redux-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm install -save lodash react react-dom react-redux redux && npm install --save-dev babel-core babel-loader babel-preset-env babel-preset-react css-loader firebase-tools html-webpack-plugin node-sass prop-types sass-loader style-loader webpack webpack-dev-server",
+    "start": "webpack-dev-server --open",
+    "build": "NODE_ENV='production' webpack -p",
+    "deploy": "firebase login && firebase init && firebase deploy"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
+  "author": "ptrckmrgn",
+  "license": "ISC"
+}
