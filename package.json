@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "setup": "npm install -save lodash react react-dom react-redux redux && npm install --save-dev babel-core babel-loader babel-preset-env babel-preset-react css-loader firebase-tools html-webpack-plugin node-sass prop-types sass-loader style-loader webpack webpack-dev-server",
-    "start": "webpack-dev-server --open",
+    "start": "NODE_ENV='development' webpack-dev-server --open",
     "build": "NODE_ENV='production' webpack -p",
-    "deploy": "firebase login && firebase init && firebase deploy"
+    "firebase": "firebase login && firebase init",
+    "deploy": "npm run build && firebase deploy"
   },
   "babel": {
     "presets": [
@@ -16,5 +16,29 @@
     ]
   },
   "author": "ptrckmrgn",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "lodash": "^4.17.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-promise": "^0.5.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.5",
+    "firebase-tools": "^3.9.2",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.5.3",
+    "prop-types": "^15.5.10",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  }
 }
